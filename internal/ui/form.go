@@ -560,7 +560,7 @@ func (m *Model) spawnSession(toolName, name, dir, group, prompt string, autoName
 		dir = path
 		worktreeRepo, worktreeBranch = root, branch
 	}
-	plan := launch.Assemble(tool, prompt, autoNamed)
+	plan := launch.Assemble(toolName, tool, prompt, autoNamed)
 	return m.launchNewSession(store.Session{
 		ID:    id,
 		Name:  name,
